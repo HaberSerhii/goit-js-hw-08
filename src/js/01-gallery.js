@@ -3,7 +3,6 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import { galleryItems } from './gallery-items';
 
 const gallery = document.querySelector('.gallery');
-gallery.insertAdjacentHTML('beforeend', createMarkup);
 
 const createMarkup = galleryItems
   .map(({ preview, original, description }) => {
@@ -12,10 +11,11 @@ const createMarkup = galleryItems
         <img class="gallery__image" src="${preview}" alt="${description}" />
       </a>
     </li>`;
-
     return item;
   })
   .join('');
+
+gallery.insertAdjacentHTML('beforeend', createMarkup);
 
 new LightBoxSimple('.gallery__item a', {
   captionsData: 'alt',
