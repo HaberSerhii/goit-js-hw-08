@@ -1,4 +1,6 @@
 import throttle from 'lodash.throttle';
+console.log(throttle); // Перевірка підключення
+
 const userEmail = document.querySelector('input[name="email"]');
 const userMessage = document.querySelector('textarea[name="message"]');
 const form = document.querySelector('.feedback-form');

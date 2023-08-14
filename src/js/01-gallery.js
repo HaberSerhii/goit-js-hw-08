@@ -1,8 +1,10 @@
 import LightBoxSimple from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import { galleryItems } from './gallery-items';
+console.log(LightBoxSimple); // Перевірка підключення
 
 const gallery = document.querySelector('.gallery');
+gallery.style.listStyleType = 'none'; // Відключення крапок у списку
 
 const createMarkup = galleryItems
   .map(({ preview, original, description }) => {

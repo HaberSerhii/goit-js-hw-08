@@ -1,6 +1,7 @@
 import Player from '@vimeo/player';
 import throttle from 'lodash.throttle';
-
+console.log(throttle); // Перевірка підключення
+console.log(Player); // Перевірка підключення
 const vimeoPlayer = document.querySelector('#vimeo-player');
 
 const playOn = function (data) {
